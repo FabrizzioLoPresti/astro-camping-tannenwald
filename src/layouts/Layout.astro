@@ -1,6 +1,8 @@
 ---
+import Navbar from "../components/Navbar/Navbar.astro";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +10,49 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Camping familiar sobre el río Los Reartes, en un bosque imponente, ubicado en el Valle de Calamuchita en las sierras de Córdoba."
+    />
+    <meta
+      name="keywords"
+      content="camping, camping los reartes, camping cordoba, camping calamuchita, camping rio los reartes, camping rio calamuchita, camping rio cordoba, camping familiar, camping familiar cordoba, camping familiar calamuchita, camping familiar rio los reartes, camping familiar rio calamuchita, camping familiar rio cordoba, camping familiar sierras de cordoba, camping familiar sierras de calamuchita, camping familiar sierras de rio los reartes, camping familiar sierras de rio calamuchita, camping familiar sierras de rio cordoba, camping familiar sierras cordoba, camping familiar sierras calamuchita, camping familiar sierras rio los reartes, camping familiar sierras rio calamuchita, camping familiar sierras rio cordoba"
+    />
+    <meta name="author" content="Camping Los Reartes" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <Navbar />
+      <slot />
+    </main>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  html {
+    font-family: system-ui, sans-serif;
+    background: #4c1917;
+    background-size: 224px;
+  }
+  .color1 {
+    color: #4c1917;
+  }
+  .color2 {
+    color: #703022;
+  }
+  .color3 {
+    color: #9d5332;
+  }
+  .color4 {
+    color: #d48642;
+  }
+  .color5 {
+    color: #eabf4e;
+  }
 </style>
