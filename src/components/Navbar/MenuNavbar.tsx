@@ -4,25 +4,21 @@ type Props = {};
 
 const enlaces = () => (
   <>
-    <li>
-      <a href="#" className="font-bold text-4xl md:text-lg">
-        Camping
-      </a>
+    <li className="relative group">
+      <a href="#">Camping</a>
+      <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
-    <li>
-      <a href="#" className="font-bold text-4xl md:text-lg">
-        Cabañas
-      </a>
+    <li className="relative group">
+      <a href="#">Cabañas</a>
+      <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
-    <li>
-      <a href="#" className="font-bold text-4xl md:text-lg">
-        Quienes Somos
-      </a>
+    <li className="relative group">
+      <a href="#">Quienes Somos</a>
+      <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
-    <li>
-      <a href="#" className="font-bold text-4xl md:text-lg">
-        Contacto
-      </a>
+    <li className="relative group">
+      <a href="#">Contacto</a>
+      <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
   </>
 );
@@ -49,7 +45,7 @@ const MenuNavbar = (props: Props) => {
     if (width >= 768) {
       // Pantallas más grandes, renderiza enlaces
       return (
-        <ul className="flex flex-row items-center justify-between gap-x-4 animate-fade-down animate-once animate-ease-in-out animate-delay-100">
+        <ul className="flex flex-row items-center justify-between gap-x-4 animate-fade-down animate-once animate-ease-in-out animate-delay-100 [&>li>a]:font-bold [&>li>a]:text-lg">
           {enlaces()}
         </ul>
       );
@@ -62,7 +58,7 @@ const MenuNavbar = (props: Props) => {
           className="text-gray-500 focus:outline-none focus:text-gray-700"
         >
           <svg
-            className="h-6 w-6 text-[#d48642]"
+            className="h-6 w-6 text-customColor-200"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -78,7 +74,7 @@ const MenuNavbar = (props: Props) => {
         <div
           className={`${
             isOpen
-              ? "fixed inset-0 bg-[#d48642] z-10 animate-fade-down animate-once animate-ease-in-out"
+              ? "fixed inset-0 bg-customColor-200 z-10 animate-fade-down animate-once animate-ease-in-out"
               : "hidden animate-fade-up animate-once animate-ease-in-out"
           } lg:hidden`}
         >
@@ -88,7 +84,7 @@ const MenuNavbar = (props: Props) => {
             className="absolute top-8 right-4 text-gray-500 focus:outline-none focus:text-gray-700"
           >
             <svg
-              className="h-6 w-6 text-[#703022]"
+              className="h-6 w-6 text-customColor-400"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -100,7 +96,7 @@ const MenuNavbar = (props: Props) => {
             </svg>
           </button>
 
-          <ul className="flex flex-col items-center justify-center h-screen gap-y-8">
+          <ul className="flex flex-col items-center justify-center h-screen gap-y-8 [&>li>a]:font-bold [&>li>a]:text-4xl">
             {enlaces()}
           </ul>
         </div>

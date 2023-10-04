@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export const prerender = false;
+---
+
+<Layout title="Página no encontrada">
+  <div
+    class="min-h-screen h-full flex flex-col justify-center items-center gap-4 text-white"
+  >
+    <h3 class="text-5xl font-bold">Error 404 - Not Found</h3>
+    <p>La página que buscas no existe...</p>
+    <img
+      src="https://midu.dev/images/this-is-fine-404.gif"
+      alt="GIF Error 404"
+    />
+    <a
+      href="/"
+      class="flex-row justify-center text-white font-bold cursor-pointer hover:bg-customColor-200 hover:text-black focus:ring-4 focus:outline-none focus:ring-customColor-300/50 rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+      >Volver al inicio</a
+    >
+  </div>
+</Layout>
