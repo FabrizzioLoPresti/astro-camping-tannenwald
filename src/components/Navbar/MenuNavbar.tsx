@@ -56,6 +56,8 @@ const MenuNavbar = (props: Props) => {
         <button
           onClick={handleToggle}
           className="text-gray-500 focus:outline-none focus:text-gray-700"
+          id="menu-button"
+          aria-label="Menu"
         >
           <svg
             className="h-6 w-6 text-customColor-200"
