@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  mobile?: boolean;
+  dark?: boolean;
+}
+
+const { href, mobile, dark } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "px-12 py-2 font-bold bg-transparent border-2 border-customColor-300 hover:bg-customColor-200 transition-all ease-in-out text-lg",
+    {
+      "w-full md:w-fit text-center": mobile,
+      "w-fit text-left": !mobile,
+      "text-customColor-500 hover:text-white": dark,
+      "text-white hover:text-black": !dark
+    }
+  ]}
+  
+>
+  <slot />
+</a>

@@ -1,3 +1,7 @@
+---
+import Button from "../Button.astro";
+---
+
 <section class="min-h-screen h-full relative">
   <div class="fondo absolute top-0 right-0 left-0 bottom-0"></div>
   <div
@@ -12,11 +16,7 @@
         Conoce nuevos lugares, crea memorias increíbles para el resto de tu
         vida.
       </p>
-      <a
-        href="/about"
-        class="px-12 py-2 w-fit text-white font-bold bg-transparent border-2 border-customColor-300 hover:bg-customColor-200 hover:text-black transition-all ease-in-out text-lg"
-        >Ver más</a
-      >
+      <Button href="#about">Ver más</Button>
     </div>
     <div
       class="absolute bottom-12 left-0 right-0 md:static flex flex-row md:flex-col gap-4 justify-center md:justify-end md:items-end"
