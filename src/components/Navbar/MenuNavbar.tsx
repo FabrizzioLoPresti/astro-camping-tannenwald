@@ -76,7 +76,7 @@ const MenuNavbar = (props: Props) => {
         <div
           className={`${
             isOpen
-              ? "fixed inset-0 bg-customColor-200 z-10 animate-fade-down animate-once animate-ease-in-out"
+              ? "fixed h-screen inset-0 bg-customColor-200 z-30 animate-fade-down animate-once animate-ease-in-out"
               : "hidden animate-fade-up animate-once animate-ease-in-out"
           } lg:hidden`}
         >
