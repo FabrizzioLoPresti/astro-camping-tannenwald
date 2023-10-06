@@ -1,3 +1,8 @@
+---
+import Camping from "./Camping.astro";
+import Cabins from "./Cabins.astro";
+---
+
 <main class="h-screen bg-customColor-500">
   <div class="mx-auto container px-4 md:px-0 py-8 md:py-28">
     <h1 class="font-bold text-4xl md:text-6xl text-customColor-50 text-center">
@@ -7,49 +12,7 @@
       >
     </h1>
 
-    <div
-      id="camping"
-      class="mt-4 md:mt-8 grid grid-cols-4 grid-rows-2 w-full h-80 [&>div]:border [&>div]:border-customColor-200 [&>div]:bg-customColor-50"
-    >
-      <div class="col-span-2 row-span-2 fondo border-none"></div>
-      <div class="col-start-3">
-        <h6>Senderos Naturales</h6>
-        <p>
-          Explora la belleza natural que nos rodea a través de nuestros senderos
-          cuidadosamente trazados, ideales para caminatas relajantes.
-        </p>
-      </div>
-      <div class="col-start-3 row-start-2">
-        <h6>Áreas de Picnic</h6>
-        <p>
-          Disfruta de comidas al aire libre en nuestras áreas designadas para
-          picnic, rodeadas de la tranquilidad de la naturaleza.
-        </p>
-      </div>
-      <div class="col-start-4">
-        <h6>Áreas de Fogata</h6>
-        <p>
-          Disfruta de una noche de fogata con tus amigos y familiares en
-          nuestras áreas designadas para fogatas.
-        </p>
-      </div>
-      <div class="col-start-4 row-start-2">
-        <h6>Observación de Estrellas</h6>
-        <p>
-          Sumérgete en la magia del cielo nocturno en nuestro lugar privilegiado
-          para la observación de estrellas. Con un cielo claro y despejado, cada
-          noche se convierte en una oportunidad única para explorar el universo.
-        </p>
-      </div>
-    </div>
+    <Camping />
+    <Cabins />
   </div>
 </main>
-
-<style>
-  .fondo {
-    background-image: url("https://live.staticflickr.com/1186/543735696_4dc815ab74_b.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>

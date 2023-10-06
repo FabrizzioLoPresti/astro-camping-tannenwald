@@ -1,0 +1,39 @@
+---
+import CabinComponent from "./CabinComponent.astro";
+---
+
+<div id="cabins" class="mt-4 md:mt-8 space-y-10 md:space-y-8">
+  <CabinComponent
+    title="Cabaña hasta 4 personas"
+    href="/cabins/basic"
+    urlImage="/images/basic_cabin/basic_cabin.avif"
+  >
+    Descubre tu refugio perfecto en nuestras cabañas: 3 junto al río y 1 dentro
+    del camping. Cama matrimonial arriba, 2 sillones cama abajo, asador, galería
+    y estacionamiento techado. Personaliza con ropa blanca (costo adicional).
+    Reserva ahora y vive una escapada única.
+  </CabinComponent>
+
+  <CabinComponent
+    title="Cabaña hasta 8 personas"
+    href="/cabins/medium"
+    urlImage="/images/medium_cabin/medium_cabin.avif"
+    backgroundLeft={true}
+  >
+    Descubre nuestras espaciosas cabañas para hasta 8 personas: 1 habitación
+    matrimonial arriba, 1 habitación con camas cuchetas, y 4 sillones cama
+    abajo. Disfruta del asador, galería y estacionamiento techado. Personaliza
+    tu estancia con ropa blanca (costo adicional). Reserva ahora para vivir una
+    experiencia única.
+  </CabinComponent>
+
+  <CabinComponent
+    title="Cabaña Loft"
+    href="/cabins/loft"
+    urlImage="/images/loft_cabin/loft_cabin.avif"
+  >
+    Explora nuestros modernos lofts para hasta 6 personas: un espacio abierto
+    con cocina y baño, terraza sobre el río, asador y cochera. Personaliza con
+    ropa blanca (costo adicional). ¡Reserva ahora para una experiencia única!
+  </CabinComponent>
+</div>
