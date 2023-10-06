@@ -9,15 +9,15 @@ const enlaces = () => (
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="#">Cabañas</a>
+      <a href="#cabins">Cabañas</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="#">Quienes Somos</a>
+      <a href="/about">Quienes Somos</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="#">Contacto</a>
+      <a href="#contact">Contacto</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
   </>
