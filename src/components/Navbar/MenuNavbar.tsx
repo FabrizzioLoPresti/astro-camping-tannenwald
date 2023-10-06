@@ -42,7 +42,7 @@ const MenuNavbar = (props: Props) => {
   };
 
   const renderNav = () => {
-    if (width >= 768) {
+    if (width >= 1024) {
       // Pantallas más grandes, renderiza enlaces
       return (
         <ul className="flex flex-row items-center justify-between gap-x-4 animate-fade-down animate-once animate-ease-in-out animate-delay-100 [&>li>a]:font-bold [&>li>a]:text-lg">
