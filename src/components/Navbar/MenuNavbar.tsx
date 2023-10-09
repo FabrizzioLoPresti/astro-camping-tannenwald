@@ -2,22 +2,22 @@ import { useState, useEffect } from "react";
 
 type Props = {};
 
-const enlaces = () => (
+const enlaces = ({ setIsLinkClicked }: { setIsLinkClicked?: React.Dispatch<React.SetStateAction<boolean>> }) => (
   <>
     <li className="relative group">
-      <a href="#camping">Camping</a>
+      <a href="/#camping" onClick={() => setIsLinkClicked && setIsLinkClicked(true)}>Camping</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="#cabins">Cabañas</a>
+      <a href="/#cabins" onClick={() => setIsLinkClicked && setIsLinkClicked(true)}>Cabañas</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="/about">Quienes Somos</a>
+      <a href="/about" onClick={() => setIsLinkClicked && setIsLinkClicked(true)}>Quienes Somos</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
     <li className="relative group">
-      <a href="#contact">Contacto</a>
+      <a href="/#contact" onClick={() => setIsLinkClicked && setIsLinkClicked(true)}>Contacto</a>
       <span className="absolute -bottom-2 left-0 w-0 h-1 bg-customColor-400 md:bg-customColor-200 group-hover:w-full group-hover:transition-all group-hover:ease-in-out"></span>
     </li>
   </>
@@ -25,6 +25,7 @@ const enlaces = () => (
 
 const MenuNavbar = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLinkClicked, setIsLinkClicked] = useState(false);
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
@@ -32,6 +33,13 @@ const MenuNavbar = (props: Props) => {
     updateWidth();
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
+
+  useEffect(() => {
+    if (isLinkClicked) {
+      setIsOpen(false);
+      setIsLinkClicked(false);
+    }
+  }, [isLinkClicked]);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -46,7 +54,7 @@ const MenuNavbar = (props: Props) => {
       // Pantallas más grandes, renderiza enlaces
       return (
         <ul className="flex flex-row items-center justify-between gap-x-4 animate-fade-down animate-once animate-ease-in-out animate-delay-100 [&>li>a]:font-bold [&>li>a]:text-lg">
-          {enlaces()}
+          {enlaces({setIsLinkClicked: undefined})}
         </ul>
       );
     }
@@ -60,7 +68,7 @@ const MenuNavbar = (props: Props) => {
           aria-label="Menu"
         >
           <svg
-            className="h-6 w-6 text-customColor-200"
+            className="h-6 w-6 text-customColor-300"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -99,7 +107,7 @@ const MenuNavbar = (props: Props) => {
           </button>
 
           <ul className="flex flex-col items-center justify-center h-screen gap-y-8 [&>li>a]:font-bold [&>li>a]:text-4xl">
-            {enlaces()}
+            {enlaces({ setIsLinkClicked })}
           </ul>
         </div>
       </div>

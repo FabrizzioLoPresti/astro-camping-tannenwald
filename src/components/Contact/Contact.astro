@@ -1,0 +1,70 @@
+<section id="contact" class="fondo scroll-m-24 lg:scroll-m-12 xl:scroll-m-24">
+  <div
+    class="mx-auto container screensizes h-full py-8 sm:py-12 lg:py-14 xl:py-16 flex flex-col justify-center"
+  >
+    <form
+      action=""
+      class="text-white flex flex-col gap-y-4 w-full lg:w-1/2 p-6 border border-customColor-300 backdrop-blur-md [&>div>input]:bg-transparent [&>div>textarea]:bg-transparent [&>div>input]:border-b [&>div>input]:border-customColor-300 [&>div>textarea]:border [&>div>textarea]:border-customColor-300"
+    >
+      <div class="flex flex-col gap-y-2 mb-2">
+        <h3 class="font-bold text-2xl md:text-3xl">
+          ¡Contáctanos y Vive la Experiencia Tannenwald!
+        </h3>
+        <p class="text-sm md:font-normal">
+          Listos para hacer de tu estadía un recuerdo inolvidable. Completa el
+          formulario abajo y déjanos saber cómo podemos hacer tu próxima visita
+          extraordinaria. ¡Esperamos tener noticias tuyas pronto!
+        </p>
+      </div>
+      <div class="flex flex-col gap-y-2">
+        <label for="name" class="text-sm md:text-base">Nombre:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Tu nombre"
+          class="p-2 focus:outline-none text-sm md:text-base"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col gap-y-2">
+        <label for="email" class="text-sm md:text-base">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Tu e-mail"
+          class="p-2 focus:outline-none text-sm md:text-base"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col gap-y-2">
+        <label for="message" class="text-sm md:text-base">Mensaje:</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="5"
+          placeholder="Escribe tu consulta aquí"
+          class="p-2 resize-none focus:outline-none text-sm md:text-base"
+          required></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-customColor-400 w-full px-6 py-3 hover:bg-customColor-500 transition-colors ease-in-out duration-300"
+        >Enviar</button
+      >
+    </form>
+  </div>
+</section>
+
+<style>
+  .fondo {
+    background-image: url("/images/bgcontact2.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+</style>

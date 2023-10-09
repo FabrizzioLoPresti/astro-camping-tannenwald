@@ -3,39 +3,37 @@ import Button from "../Button.astro";
 ---
 
 <section class="bg-customColor-50" id="about">
-  <div class="mx-auto container">
+  <div
+    class="flex flex-col lg:flex-row lg:justify-between lg:items-center py-8 lg:py-12 gap-8 mx-auto container screensizes"
+  >
     <div
-      class="flex flex-col lg:flex-row lg:justify-between lg:items-center py-8 lg:py-12 gap-8 screensizes"
+      class="p-4 lg:p-8 border border-customColor-400 rounded-md w-full lg:w-5/12"
     >
-      <div
-        class="p-4 lg:p-8 border border-customColor-400 rounded-md w-full lg:w-5/12"
-      >
-        <img
-          src="/images/about.avif"
-          alt="Sobre Nosotros"
-          width="500"
-          height="500"
-          class="w-fit"
-        />
-      </div>
-      <div class="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8">
-        <div class="relative w-fit">
-          <h2 class="text-4xl font-bold text-customColor-500 relative">
-            Sobre Nosotros
-          </h2>
-          <div class="absolute -bottom-2 left-0 h-1 bg-customColor-500 w-4/5">
-          </div>
+      <img
+        src="/images/about.avif"
+        alt="Sobre Nosotros"
+        width="500"
+        height="500"
+        class="w-fit"
+      />
+    </div>
+    <div class="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8">
+      <div class="relative w-fit">
+        <h2 class="text-4xl font-bold text-customColor-500 relative">
+          Sobre Nosotros
+        </h2>
+        <div class="absolute -bottom-2 left-0 h-1 bg-customColor-500 w-4/5">
         </div>
-        <p class="text-customColor-500 lg:text-base leading-relaxed">
-          En el corazón de la pintoresca localidad de Los Reartes, encontrará
-          nuestro acogedor refugio, Tannenwald. Somos mucho más que un camping
-          con cabañas; somos un santuario rodeado por la belleza natural de las
-          Sierras de Córdoba. Nacimos en el año 1978 con la característica de
-          camping familiar, orientados a un público cuidadoso y amante de la
-          naturaleza, respetuoso de las reglas de silencio y tranquilidad.
-        </p>
-        <Button href="/about" mobile={true} dark={true}>Quienes Somos</Button>
       </div>
+      <p class="text-customColor-500 lg:text-base leading-relaxed">
+        En el corazón de la pintoresca localidad de Los Reartes, encontrará
+        nuestro acogedor refugio, Tannenwald. Somos mucho más que un camping con
+        cabañas; somos un santuario rodeado por la belleza natural de las
+        Sierras de Córdoba. Nacimos en el año 1978 con la característica de
+        camping familiar, orientados a un público cuidadoso y amante de la
+        naturaleza, respetuoso de las reglas de silencio y tranquilidad.
+      </p>
+      <Button href="/about" mobile={true} dark={true}>Quienes Somos</Button>
     </div>
   </div>
 </section>
