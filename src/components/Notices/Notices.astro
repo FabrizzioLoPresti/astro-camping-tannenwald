@@ -1,7 +1,53 @@
-<section id="notices" class="bg-customColor-500 h-40">
-  <div
-    class="mx-auto container w-full screensizes flex items-center justify-center h-full"
-  >
-    <h3 class="text-3xl font-bold text-customColor-100">Noticias</h3>
-  </div>
+---
+const news = [
+  "CAMPING CERRADO / VOLVEMOS: FINDE LARGO DE NOVIEMBRE 23",
+  "OKTOBERFEST ´23: ABRIMOS SOLO 3 CABAÑAS FUERA DEL CAMPING",
+  "CONSULTA POR PROMO ESPECIAL 2 DIAS - 1 NOCHE EN MARZO Y PRIMER FINDE DE ABRIL 2023.-",
+];
+---
+
+<section class="notices bg-customColor-500 h-40 flex flex-row items-center">
+  {
+    new Array(2).fill(null).map(() => (
+      <div class="news-slider">
+        {news.map((newsItem) => (
+          <div class="news-item">
+            <p class="text-3xl font-bold text-customColor-100 uppercase">
+              {newsItem}
+            </p>
+          </div>
+        ))}
+      </div>
+    ))
+  }
 </section>
+
+<style>
+  .notices {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .news-slider {
+    display: inline-block;
+    animation: 20s marquee infinite linear;
+  }
+
+  .news-item {
+    display: inline-block;
+  }
+
+  .news-item > p::after {
+    content: "|";
+    margin: 0 1rem;
+    @apply text-customColor-100;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+</style>
