@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CabinComponent from "../../components/Cabins/CabinComponent.astro";
+
+const images = [
+  "/images/medium_cabin/medium_cabin.avif",
+  "/images/medium_cabin/medium_cabin_1.avif",
+  "/images/medium_cabin/medium_cabin_2.avif",
+];
+---
+
+<Layout title="Cabaña 8 Personas - Camping Tannenwald | Camping & Cabañas">
+  <section
+    class="mx-auto container screensizes mt-28"
+    transition:name="cabin"
+    transition:animate="slide"
+  >
+    <CabinComponent title="hasta 8 personas" images={images}>
+      Descubre nuestras espaciosas cabañas para hasta 8 personas: 1 habitación
+      matrimonial arriba, 1 habitación con camas cuchetas, y 4 sillones cama
+      abajo. Disfruta del asador, galería y estacionamiento techado. Personaliza
+      tu estancia con ropa blanca (costo adicional).
+    </CabinComponent>
+  </section>
+</Layout>

@@ -4,16 +4,19 @@ import CabinComponent from "../../components/Cabins/CabinComponent.astro";
 
 const images = [
   "/images/basic_cabin/basic_cabin.avif",
-  "https://static.wixstatic.com/media/532599_a55c62042d8949d88f1bcc0c8eab9295~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_440,h_328,q_90/532599_a55c62042d8949d88f1bcc0c8eab9295~mv2_d_3264_2448_s_4_2.webp",
-  "https://static.wixstatic.com/media/532599_450bf2c1fc504c4885a8a194779adc94~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_440,h_328,q_90/532599_450bf2c1fc504c4885a8a194779adc94~mv2_d_3264_2448_s_4_2.webp",
-  "https://static.wixstatic.com/media/532599_a1780e99e6164f178a86e44e32081bb1~mv2_d_2448_2448_s_4_2.jpg/v1/fill/w_440,h_440,q_90/532599_a1780e99e6164f178a86e44e32081bb1~mv2_d_2448_2448_s_4_2.webp",
-  "https://static.wixstatic.com/media/532599_ad1a8db18d0b432ab98bb544444f9ab1~mv2_d_3264_2448_s_4_2.jpg/v1/fill/w_440,h_328,q_90/532599_ad1a8db18d0b432ab98bb544444f9ab1~mv2_d_3264_2448_s_4_2.webp",
-  "https://static.wixstatic.com/media/532599_bddac5ab510f4280b8c9949f80e35d2c~mv2_d_1378_1219_s_2.jpg/v1/fill/w_440,h_388,q_90/532599_bddac5ab510f4280b8c9949f80e35d2c~mv2_d_1378_1219_s_2.webp",
+  "/images/basic_cabin/basic_cabin_1.avif",
+  "/images/basic_cabin/basic_cabin_2.avif",
+  "/images/basic_cabin/basic_cabin_3.avif",
+  "/images/basic_cabin/basic_cabin_6.avif",
 ];
 ---
 
 <Layout title="Cabaña 4 Personas - Camping Tannenwald | Camping & Cabañas">
-  <section class="mx-auto container screensizes mt-28">
+  <section
+    class="mx-auto container screensizes mt-28"
+    transition:name="cabin"
+    transition:animate="slide"
+  >
     <CabinComponent title="hasta 4 personas" images={images}>
       Descubre tu refugio perfecto en nuestras cabañas: 3 junto al río y 1
       dentro del camping. Cama matrimonial arriba, 2 sillones cama abajo,

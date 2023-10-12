@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CabinComponent from "../../components/Cabins/CabinComponent.astro";
+
+const images = [
+  "/images/loft_cabin/loft_cabin.avif",
+  "/images/loft_cabin/loft_cabin_1.avif",
+  "/images/loft_cabin/loft_cabin_2.avif",
+  "/images/loft_cabin/loft_cabin_3.avif",
+  "/images/loft_cabin/loft_cabin_4.avif",
+  "/images/loft_cabin/loft_cabin_5.avif",
+];
+---
+
+<Layout title="Cabaña Loft - Camping Tannenwald | Camping & Cabañas">
+  <section
+    class="mx-auto container screensizes mt-28"
+    transition:name="cabin"
+    transition:animate="slide"
+  >
+    <CabinComponent title="loft" images={images}>
+      Explora nuestros modernos lofts para hasta 6 personas: un espacio abierto
+      con cocina y baño, terraza sobre el río, asador y cochera. Personaliza con
+      ropa blanca (costo adicional). ¡Reserva ahora para una experiencia única!
+    </CabinComponent>
+  </section>
+</Layout>
